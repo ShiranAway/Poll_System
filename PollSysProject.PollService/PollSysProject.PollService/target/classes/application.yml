@@ -1,0 +1,22 @@
+server:
+  port: 8083
+
+spring:
+  main:
+    allow-circular-references: true
+  datasource:
+    url: jdbc:h2:mem:userdb
+    username: sa
+    password: password
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+  #    spring.jpa.data-case-platform: org.hibernate.dialect.H2Dialect
+
+  h2:
+    console:
+      enabled: true
+logging:
+  level:
+    feign: DEBUG
